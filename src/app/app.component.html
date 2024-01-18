@@ -1,12 +1,12 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
-  <header>
-    <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar01-512.png" alt="Immagine di esempio">
-    <h1>Chiara Sava</h1>
-    <h2>Phd math student</h2>
-    <button mat-raised-button (click)="drawer.toggle()">Conoscimi</button>
+<header>
+    <mat-drawer-container class="example-container" [hasBackdrop]="true">
+        <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
+            <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar01-512.png" alt="Immagine di esempio">
+            <h1>Chiara Sava</h1>
+            <h2>Phd math student</h2>
+            <button mat-raised-button (click)="drawer.toggle()">Conoscimi</button>
+    </mat-drawer-container>
 </header>
-</mat-drawer-container>
 
 <section>
     <h2>Research</h2>
