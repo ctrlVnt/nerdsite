@@ -23,6 +23,8 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .image {
@@ -31,6 +33,24 @@ section{
     height: auto;
     transition: transform 0.3s ease;
 }
+
+.clear-icon{
+    position: absolute;
+    right: 10px;
+}
+
+mat-card{
+    width: 70%;
+}
+
+mat-card-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-icon{}
 
 mat-drawer-container {
     background-color: white;
@@ -51,7 +71,7 @@ mat-drawer {
 }
 
 .subject-list{
-    width: 80%;
+    width: 90%;
 }
 
 .div-header{
@@ -61,4 +81,34 @@ mat-drawer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.presentation-text{
+    padding: 30px;
+    width: 300px;
+}
+
+.navigations-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.send-button{
+    width: 30px;
+}
+
+form{
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-divider{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-weight: bold;
 }

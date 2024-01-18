@@ -7,12 +7,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
+  imports: [CommonModule, RouterOutlet, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -35,6 +37,17 @@ export class AppComponent {
     { content: 'Simple card 6' },
     { content: 'Simple card 7' },
     { content: 'Simple card 8' },
+];
+
+subjects = [
+  { content: 'Simple card 1' },
+  { content: 'Simple card 2' },
+  { content: 'Simple card 3' },
+  { content: 'Simple card 4' },
+  { content: 'Simple card 5' },
+  { content: 'Simple card 6' },
+  { content: 'Simple card 7' },
+  { content: 'Simple card 8' },
 ];
   
   openSection(sectionId: string){

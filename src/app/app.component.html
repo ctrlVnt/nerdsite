@@ -1,7 +1,14 @@
 <header>
+    
     <mat-drawer-container [hasBackdrop]="true">
+        <button mat-icon-button class="menu-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
         <mat-drawer #drawer mode="over">
-            <p>
+            <button mat-icon-button class="clear-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+                <mat-icon>clear</mat-icon>
+              </button>
+            <p class="presentation-text">
                 I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
                 I work under the supervision of Michel Brion and Matthieu Romagny.
                 
@@ -11,64 +18,63 @@
                 My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
                 Here is my CV.
             </p>
-        <button mat-raised-button (click)="openSection('research')">Research</button>
-        <button mat-raised-button (click)="openSection('teaching')">Teaching</button>
-        <button mat-raised-button (click)="openSection('contact')">Contact</button>        
+            <div class="navigations-buttons">
+                <button mat-button (click)="openSection('research')">Research</button>
+                <button mat-button (click)="openSection('teaching')">Teaching</button>
+                <button mat-button (click)="openSection('contact')">Contact</button>        
+            </div>
         </mat-drawer>
 
         <div class="div-header">
             <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar01-512.png" alt="Immagine di esempio">
             <h1>Chiara Sava</h1>
             <h2>Phd math student</h2>
-            <button mat-raised-button (click)="drawer.toggle()">Conoscimi</button>
         </div>
     </mat-drawer-container>
 </header>
 
 <section id="research">
     <h2>Research</h2>
-    <mat-grid-list class="article-list" cols="3" rowHeight="1:1">
+    <mat-grid-list class="article-list" cols="3" rowHeight="2:1">
             <mat-grid-tile *ngFor="let card of cards">
                 <mat-card>
-                    <mat-card-content>{{ card.content }}</mat-card-content>
+                    <mat-card-content>
+                        <h3>Title</h3>
+                        <p>Description</p>
+                        <a>Link ref</a>
+                    </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
       </mat-grid-list>
-          
 </section>
 
 <section id="teaching">
     <h2>Teaching</h2>
     <div class="subject-list">
-        <p>n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. </p>
-        <mat-divider></mat-divider>
-        <p> commonly used to demonstrate the relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. </p>
+        <div *ngFor="let i of subjects">
+            <h3>Title subject</h3>
+            <p>description</p>
+            <a>Link</a>
+            <mat-divider></mat-divider>
+        </div>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
     <form name="contact" method="POST" netlify>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-            <label>Object: <input type="text" name="object" /></label>
-          </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-      
-    <div>
-        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-            <mat-icon>facebook</mat-icon>
-        </button>
-        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-            <mat-icon>mail_outline</mat-icon>
-        </button>
-    </div>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" name="email" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Object</mat-label>
+            <input type="text" name="object" matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Message</mat-label>
+            <textarea matInput name="message"></textarea>
+        </mat-form-field>
+        <button class="send-button" mat-raised-button type="submit">Send</button>
+    </form>
 </section>
