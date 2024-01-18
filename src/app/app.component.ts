@@ -4,12 +4,14 @@ import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatDividerModule} from '@angular/material/divider'; 
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatButtonModule, MatIconModule, MatSidenavModule],
+  imports: [CommonModule, RouterOutlet, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [

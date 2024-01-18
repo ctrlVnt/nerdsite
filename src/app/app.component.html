@@ -1,31 +1,55 @@
-<header>
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
+  <header>
     <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar01-512.png" alt="Immagine di esempio">
     <h1>Chiara Sava</h1>
     <h2>Phd math student</h2>
-    <div *ngFor="let image of images; let i = index">
-        <img
-          [src]="'../assets/img/elem' + (i + 1) + '.svg'"
-          [alt]="'Image ' + (i + 1)"
-          class="image"
-          [@move]="currentState[i]"
-          [ngStyle]="getRandomPosition(i)"
-          (mouseover)="onMouseEnter(i)"
-          (mouseleave)="onMouseLeave(i)"
-        />
-      </div>
-      
+    <button mat-raised-button (click)="drawer.toggle()">Conoscimi</button>
 </header>
+</mat-drawer-container>
 
 <section>
-    <h1>About me</h1>
-    <div>
-        <p>Based in : Prague</p>
-        <p>n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. </p>
+    <h2>Research</h2>
+    <div>     
+        <mat-card>
+            <mat-card-content>Simple card</mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>Simple card</mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>Simple card</mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>Simple card</mat-card-content>
+        </mat-card>
     </div>
 </section>
 
 <section>
-    <h2>My contact:</h2>
+    <h2>Teaching</h2>
+    <div>
+        <p>n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. </p>
+        <mat-divider></mat-divider>
+        <p> commonly used to demonstrate the relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. </p>
+    </div>
+<section>
+    <h2>Contact</h2>
+    <form name="contact" method="POST" netlify>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>Object: <input type="text" name="object" /></label>
+          </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+      
     <div>
         <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
             <mat-icon>facebook</mat-icon>
