@@ -1,9 +1,5 @@
 header{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     /*background-image: url('../assets/img/bg.svg');
     background-size: cover;
     background-repeat: no-repeat;*/
@@ -36,15 +32,33 @@ section{
     transition: transform 0.3s ease;
 }
 
-.example-container {
+mat-drawer-container {
     background-color: white;
     width: 100%;
     height: 100%;
 }
   
 mat-drawer {
-  padding: 120px;
+  padding: 20px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.article-list{
+    width: 100%;
+}
+
+.subject-list{
+    width: 80%;
+}
+
+.div-header{
+    position:relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

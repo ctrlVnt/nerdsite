@@ -5,13 +5,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card'; 
-import {MatDividerModule} from '@angular/material/divider'; 
+import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list'; 
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
+  imports: [CommonModule, RouterOutlet, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -24,31 +25,22 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class AppComponent {
   title = 'chiarasava';
-  images = new Array(10).fill(0);
-  currentState: string[] = new Array(this.images.length).fill('initial');
 
-  getRandomPosition(index: number) {
-    const gridSize = 4;
-    const column = index % gridSize;
-    const row = Math.floor(index / gridSize);
-
-    const leftPercentage = (column / (gridSize - 1)) * 70;
-    const topPercentage = (row / (gridSize - 1)) * 110;
-
-    return {
-      'position': 'absolute',
-      'width': '15%',
-      'left': `${leftPercentage}%`,
-      'top': `${topPercentage}%`,
-      'z-index': '0'
-    };
-  }
-
-  onMouseEnter(index: number) {
-    this.currentState[index] = 'hovered';
-  }
-
-  onMouseLeave(index: number) {
-    this.currentState[index] = 'initial';
+  cards = [
+    { content: 'Simple card 1' },
+    { content: 'Simple card 2' },
+    { content: 'Simple card 3' },
+    { content: 'Simple card 4' },
+    { content: 'Simple card 5' },
+    { content: 'Simple card 6' },
+    { content: 'Simple card 7' },
+    { content: 'Simple card 8' },
+];
+  
+  openSection(sectionId: string){
+    const elem = document.getElementById(sectionId);
+    if(elem){
+      elem.scrollIntoView({behavior: 'smooth'});
+    }
   }
 }
