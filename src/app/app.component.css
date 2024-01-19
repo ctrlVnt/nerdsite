@@ -110,17 +110,6 @@ mat-drawer {
     flex-direction: column;
 }
 
-.send-button{
-    width: 30px;
-}
-
-form{
-    width: 60%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-}
-
 mat-divider{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -128,4 +117,13 @@ mat-divider{
 
 h3{
     font-weight: bold;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: darkgrey;
 }
