@@ -1,11 +1,11 @@
 <header>
     
     <mat-drawer-container [hasBackdrop]="true">
-        <button mat-icon-button class="menu-icon" aria-label="Example icon-button with menu icon" onclick="this.blur()" (click)="drawer.toggle()">
+        <button mat-icon-button class="menu-icon" onclick="this.blur()" (click)="drawer.open()">
             <mat-icon>menu</mat-icon>
         </button>
-        <mat-drawer #drawer mode="over">
-            <button mat-icon-button class="clear-icon" aria-label="Example icon-button with menu icon" onclick="this.blur()" (click)="drawer.toggle()">
+        <mat-drawer #drawer mode="over" autoFocus="false">
+            <button mat-icon-button id="clearButton" class="clear-icon" (click)="drawer.close()">
                 <mat-icon>clear</mat-icon>
             </button>
             <div class="presentation-text">
