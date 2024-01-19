@@ -5,13 +5,16 @@ header{
     background-repeat: no-repeat;*/
 }
 
-img {
-    max-width: 80%;
+.profile-img {
+    margin-bottom: 50px;
+    max-width: 300px;
+    border-radius: 15%;
     z-index: 1;
 }
 
 h1{
     font-size: 5em;
+    margin-bottom: 30px;
 }
 
 h2{
@@ -40,7 +43,7 @@ section{
 }
 
 mat-card{
-    width: 70%;
+    width: 80%;
 }
 
 mat-card-content{
@@ -48,6 +51,16 @@ mat-card-content{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.research-title{
+
+}
+.research-text{
+    
+}
+.research-link{
+    
 }
 
 .menu-icon{}
@@ -86,6 +99,10 @@ mat-drawer {
 .presentation-text{
     padding: 30px;
     width: 300px;
+}
+
+.about-me{
+    text-align: center;
 }
 
 .navigations-buttons{

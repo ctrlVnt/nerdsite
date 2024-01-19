@@ -1,23 +1,26 @@
 <header>
     
     <mat-drawer-container [hasBackdrop]="true">
-        <button mat-icon-button class="menu-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+        <button mat-icon-button class="menu-icon" aria-label="Example icon-button with menu icon" onclick="this.blur()" (click)="drawer.toggle()">
             <mat-icon>menu</mat-icon>
-          </button>
+        </button>
         <mat-drawer #drawer mode="over">
-            <button mat-icon-button class="clear-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+            <button mat-icon-button class="clear-icon" aria-label="Example icon-button with menu icon" onclick="this.blur()" (click)="drawer.toggle()">
                 <mat-icon>clear</mat-icon>
-              </button>
-            <p class="presentation-text">
-                I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
-                I work under the supervision of Michel Brion and Matthieu Romagny.
-                
-                My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic.
-                Related subjects I am interested in are birational geometry and representation theory of reductive groups.
-                
-                My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
-                Here is my CV.
-            </p>
+            </button>
+            <div class="presentation-text">
+                <h3 class="about-me">About me</h3>
+                <p>
+                    I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
+                    I work under the supervision of Michel Brion and Matthieu Romagny.
+                    
+                    My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic.
+                    Related subjects I am interested in are birational geometry and representation theory of reductive groups.
+                    
+                    My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
+                    Here is my CV.
+                </p>
+            </div>
             <div class="navigations-buttons">
                 <button mat-button (click)="openSection('research')">Research</button>
                 <button mat-button (click)="openSection('teaching')">Teaching</button>
@@ -26,7 +29,7 @@
         </mat-drawer>
 
         <div class="div-header">
-            <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar01-512.png" alt="Immagine di esempio">
+            <img class="profile-img" src="../assets/img/profile.jpg" alt="Immagine di esempio">
             <h1>Chiara Sava</h1>
             <h2>Phd math student</h2>
         </div>
@@ -35,13 +38,13 @@
 
 <section id="research">
     <h2>Research</h2>
-    <mat-grid-list class="article-list" cols="3" rowHeight="2:1">
+    <mat-grid-list class="article-list" cols="3" rowHeight="1:1">
             <mat-grid-tile *ngFor="let card of cards">
                 <mat-card>
                     <mat-card-content>
-                        <h3>Title</h3>
-                        <p>Description</p>
-                        <a>Link ref</a>
+                        <h3 class="research-title">Title</h3>
+                        <p class="research-text">Description</p>
+                        <a class="research-link">Link ref</a>
                     </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
