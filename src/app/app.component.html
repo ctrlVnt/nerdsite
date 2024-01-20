@@ -21,11 +21,13 @@
                     Here is my CV.
                 </p>
             </div>
-            <div class="navigations-buttons">
+            <mat-action-list class="navigation-buttons">
                 <button mat-button (click)="openSection('research')">Research</button>
+                <button mat-button (click)="openSection('talks')">Talks</button> 
                 <button mat-button (click)="openSection('teaching')">Teaching</button>
+                <button mat-button (click)="openSection('links')">Some links</button> 
                 <button mat-button (click)="openSection('contact')">Contact</button>        
-            </div>
+            </mat-action-list>
         </mat-drawer>
 
         <div class="div-header">
@@ -39,28 +41,74 @@
 <section id="research">
     <h2>Research</h2>
     <mat-grid-list class="article-list" cols="3" rowHeight="1:1">
-            <mat-grid-tile *ngFor="let card of cards">
+            <mat-grid-tile *ngFor="let pubblication of pubblications">
                 <mat-card>
                     <mat-card-content>
-                        <h3 class="research-title">Title</h3>
-                        <p class="research-text">Description</p>
-                        <a class="research-link">Link ref</a>
+                        <h3 class="research-title">{{pubblication.content[0]}}</h3>
+                        <p class="research-text">{{pubblication.content[1]}}</p>
+                        <a class="research-link">{{pubblication.content[2]}}</a>
                     </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
       </mat-grid-list>
 </section>
 
+<section id="talks">
+    <h2>Talks</h2>
+    <mat-grid-list class="talk-grid" cols="2" rowHeight="1:1">
+        <mat-grid-tile>
+            <mat-list class="talk-list">
+                <h3>Past</h3>
+                @for(pass of passed_talks; track pass){
+                    <mat-list-item>
+                        <span matListItemTitle>{{pass.content[0]}}</span>
+                        <span matListItemLine>{{pass.content[1]}}</span>
+                        <span matListItemLine>{{pass.content[2]}}</span>
+                    </mat-list-item>
+                }
+            </mat-list>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-list class="talk-list">
+                <h3>Upcoming</h3>
+                @for(up of upcoming_talks; track up){
+                    <mat-list-item>
+                        <span matListItemTitle>{{up.content[0]}}</span>
+                        <span matListItemLine>{{up.content[1]}}</span>
+                        <span matListItemLine>{{up.content[2]}}</span>
+                    </mat-list-item>
+                }
+            </mat-list>
+        </mat-grid-tile>
+    </mat-grid-list>
+</section>
+
 <section id="teaching">
     <h2>Teaching</h2>
-    <div class="subject-list">
-        <div *ngFor="let i of subjects">
-            <h3>Title subject</h3>
-            <p>description</p>
-            <a>Link</a>
+    <mat-list class="subject-list">
+        @for(sub of subjects; track sub){
+            <mat-list-item>
+                <span matListItemTitle>{{sub.content[0]}}</span>
+                <span matListItemLine>{{sub.content[1]}}</span>
+                <a>{{sub.content[2]}}</a>
+            </mat-list-item>
             <mat-divider></mat-divider>
-        </div>
-    </div>
+        }
+    </mat-list>
+</section>
+
+<section id="links">
+    <h2>Some links</h2>
+    <mat-list class="link-list">
+        @for(link of links; track link){
+            <mat-list-item>
+                <span matListItemTitle>{{link.content[0]}}</span>
+                <span matListItemLine>{{link.content[1]}}</span>
+                <a>{{link.content[2]}}</a>
+            </mat-list-item>
+        }
+    </mat-list>
 </section>
 
 <section id="contact">

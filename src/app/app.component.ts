@@ -9,12 +9,13 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input';
+import {MatListModule} from '@angular/material/list'; 
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
+  imports: [CommonModule, RouterOutlet, MatListModule, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -28,28 +29,116 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class AppComponent {
   title = 'chiarasava';
 
-  cards = [
-    { content: 'Simple card 1' },
-    { content: 'Simple card 2' },
-    { content: 'Simple card 3' },
-    { content: 'Simple card 4' },
-    { content: 'Simple card 5' },
-    { content: 'Simple card 6' },
-    { content: 'Simple card 7' },
-    { content: 'Simple card 8' },
+  pubblications = [
+    { content: [
+      'Titolo 1',
+      'descrizione 1',
+      'link 1'
+    ]},
+    { content: [
+      'Titolo 2',
+      'descrizione 2',
+      'link 2'
+    ]},
+    { content: [
+      'Titolo 3',
+      'descrizione 3',
+      'link 3'
+    ]},
+    { content: [
+      'Titolo 4',
+      'descrizione 4',
+      'link 4'
+    ]},
+    { content: [
+      'Titolo 5',
+      'descrizione 5',
+      'link 5'
+    ]},
+    { content: [
+      'Titolo 6',
+      'descrizione 6',
+      'link 6'
+    ]}
+];
+
+upcoming_talks = [
+  { content: [
+    'Ciao sono...',
+    'kjhdbjksbldbckljvn',
+    'Ver'
+  ]}
+];
+
+passed_talks = [
+  { content: [
+    'saasdsd',
+    'dadcas',
+    'NA'
+  ]},
+  { content: [
+    'Titolo aaaaa 2',
+    'descrizione aaaaa 2',
+    'TO'
+  ]},
+  { content: [
+    'sdacasdac',
+    'sdcascd',
+    'PZ'
+  ]}
 ];
 
 subjects = [
-  { content: 'Simple card 1' },
-  { content: 'Simple card 2' },
-  { content: 'Simple card 3' },
-  { content: 'Simple card 4' },
-  { content: 'Simple card 5' },
-  { content: 'Simple card 6' },
-  { content: 'Simple card 7' },
-  { content: 'Simple card 8' },
+  { content: [
+    'Titolo subject 1',
+    'descrizione subject 1',
+    'link subject 1'
+  ]},
+  { content: [
+    'Titolo subject 2',
+    'descrizione subject 2',
+    'link subject 2'
+  ]},
+  { content: [
+    'Titolo subject 3',
+    'descrizione subject 3',
+    'link subject 3'
+  ]},
+  { content: [
+    'Titolo subject 4',
+    'descrizione subject 4',
+    'link subject 4'
+  ]},
+  { content: [
+    'Titolo subject 5',
+    'descrizione subject 5',
+    'link subject 5'
+  ]}
 ];
   
+links = [
+  { content: [
+    'Titolo subject 1',
+    'descrizione subject 1',
+    'link subject 1'
+  ]},
+  { content: [
+    'Titolo subject 2',
+    'descrizione subject 2',
+    'link subject 2'
+  ]},
+  { content: [
+    'Titolo subject 3',
+    'descrizione subject 3',
+    'link subject 3'
+  ]},
+  { content: [
+    'Titolo subject 4',
+    'descrizione subject 4',
+    'link subject 4'
+  ]}
+];
+
   openSection(sectionId: string){
     const elem = document.getElementById(sectionId);
     if(elem){

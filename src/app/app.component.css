@@ -83,6 +83,15 @@ mat-drawer {
     width: 100%;
 }
 
+.talk-grid{
+    width: 100%;
+    align-items: flex-start;
+}
+
+.talk-list{
+    align-items: flex-start;
+}
+
 .subject-list{
     width: 90%;
 }
@@ -105,7 +114,7 @@ mat-drawer {
     text-align: center;
 }
 
-.navigations-buttons{
+.navigation-buttons{
     display: flex;
     flex-direction: column;
 }
