@@ -2,12 +2,13 @@
     overflow: scroll;
     height: 100vh;
     scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
 }
 
 .profile-img {
     margin-bottom: 50px;
     max-width: 300px;
-    border-radius: 15%;
+    border-radius: 50%;
     z-index: 1;
 }
 
