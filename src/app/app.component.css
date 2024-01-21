@@ -22,9 +22,9 @@ h2{
 
 section{
     position: relative;
+    overflow: scroll;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     scroll-snap-align: start;
     height: 100vh;

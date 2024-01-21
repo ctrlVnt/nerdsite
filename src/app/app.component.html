@@ -40,7 +40,7 @@
 
     <section id="research">
         <h2>Research</h2>
-        <mat-grid-list class="article-list" cols="3" rowHeight="1:1">
+        <mat-grid-list class="article-list"[cols]="breakpoint" rowHeight="1:1" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let pubblication of pubblications">
                     <mat-card>
                         <mat-card-content>

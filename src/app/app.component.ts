@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
@@ -26,9 +26,11 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'chiarasava';
-
+  breakpoint: number = 1;
+  constructor() { }
+  
   pubblications = [
     { content: [
       'Titolo 1',
@@ -138,6 +140,14 @@ links = [
     'link subject 4'
   ]}
 ];
+
+  ngOnInit() {
+    this.breakpoint = (window.innerWidth <= 600) ? 1 : 3;
+  }
+
+  onResize(event: Event) {
+    this.breakpoint = ((event.target as Window).innerWidth <= 600) ? 1 : 3;
+  }
 
   openSection(sectionId: string){
     const elem = document.getElementById(sectionId);
