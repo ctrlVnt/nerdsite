@@ -13,10 +13,10 @@
 
 h1{
     font-size: 5em;
-    margin-bottom: 30px;
 }
 
 h2{
+    margin-top: 30px;
     font-size: 2em;
 }
 
@@ -84,13 +84,21 @@ mat-drawer {
 }
 
 .talk-grid{
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .talk-list{
-    align-items: flex-start;
+    margin: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .talk-list {
+      width: 100%;
+    }
+  }
 
 .subject-list{
     width: 90%;
