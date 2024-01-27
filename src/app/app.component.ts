@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
@@ -154,5 +154,12 @@ links = [
     if(elem){
       elem.scrollIntoView({behavior: 'smooth'});
     }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event : Event) {
+    
+    console.log("xiao");
+    
   }
 }
