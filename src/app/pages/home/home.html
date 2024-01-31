@@ -1,5 +1,8 @@
-<div id="home" class="parent">
-    <section style="background-color: #f0f0f0;">
+<div id="home" class="parent">    
+
+    <app-navbar></app-navbar>
+    
+    <section id="header" class="header" style="background-color: #f0f0f0;">
         <mat-drawer-container [hasBackdrop]="true">
             <button mat-icon-button class="menu-icon" onclick="this.blur()" (click)="drawer.open()">
                 <mat-icon>menu</mat-icon>
