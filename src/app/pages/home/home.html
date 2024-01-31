@@ -4,9 +4,6 @@
     
     <section id="header" class="header" style="background-color: #f0f0f0;">
         <mat-drawer-container [hasBackdrop]="true">
-            <button mat-icon-button class="menu-icon" onclick="this.blur()" (click)="drawer.open()">
-                <mat-icon>menu</mat-icon>
-            </button>
             <mat-drawer #drawer mode="over" autoFocus="false">
                 <button mat-icon-button id="clearButton" class="clear-icon" (click)="drawer.close()">
                     <mat-icon>clear</mat-icon>
@@ -24,19 +21,25 @@
                         Here is my CV.
                     </p>
                 </div>
-                <mat-action-list class="navigation-buttons">
-                    <button mat-button (click)="openSection('research')">Research</button>
-                    <button mat-button (click)="openSection('talks')">Talks</button> 
-                    <button mat-button (click)="openSection('teaching')">Teaching</button>
-                    <button mat-button (click)="openSection('links')">Some links</button> 
-                    <button mat-button (click)="openSection('contact')">Contact</button>        
-                </mat-action-list>
             </mat-drawer>
 
             <div class="div-header">
                 <img class="profile-img" src="../assets/img/profile.jpg" alt="Immagine di esempio">
                 <h1>Chiara Sava</h1>
                 <h2>Phd math student</h2>
+                <p class="about-me-text">
+                    I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
+                    I work under the supervision of Michel Brion and Matthieu Romagny.
+                    
+                    My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic.
+                    Related subjects I am interested in are birational geometry and representation theory of reductive groups.
+                    
+                    My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
+                    Here is my CV.
+                </p>
+                <button mat-flat-button class="about-me-button" (click)="drawer.open()">
+                    More about me
+                </button>
             </div>
         </mat-drawer-container>
     </section>
@@ -113,10 +116,9 @@
     <section id="contact" style="background-color: #D6DFFF;">
         <h2>Contact</h2>
         <a href="mailto:indirizzo@email.com">indirizzo&#64;email.com</a>
-    </section>
-
-    <section class="footer">
-        <h2>Credits</h2>
-        <h4>website designed by <a href="https://riccardoventurini.dev/">riccardoventurini.dev</a></h4>
+        <footer>
+            <h2>Credits</h2>
+            <h4>website designed by <a href="https://riccardoventurini.dev/">riccardoventurini.dev</a></h4>
+        </footer>
     </section>
 </div>
