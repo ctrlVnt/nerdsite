@@ -3,6 +3,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CommonModule } from '@angular/common';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-navbar',
@@ -10,19 +11,44 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, MatButtonModule, MatIconModule, MatSidenavModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
+  animations: [
+    trigger('navAnim', [
+      transition('false => true', [
+        style({ height: 0 }),
+        animate("0.3s", style({ height: "*" }))
+      ]),
+      transition('true => false', [
+        style({ height: "*" }),
+        animate("0.3s", style({ height: 0 }))
+      ])
+    ])
+  ]
 })
 export class NavbarComponent implements OnInit {
 
   isNavExpanded = true;
 
+  actions = [
+    'Research',
+    'Talks',
+    'Teaching',
+    'Some links',
+    'Contact',
+  ];
+
+  fadeInDelays: string[] = [];
+
   ngOnInit() {
     if (window.innerWidth <= 768) {
       this.isNavExpanded = false;
     }
+    this.fadeInDelays = this.actions.map((_, i) => `${i * 0.2}s`);
   }
 
   toggleNav() {
-    this.isNavExpanded = !this.isNavExpanded;
+    if (window.innerWidth <= 768) {
+      this.isNavExpanded = !this.isNavExpanded;
+    }
   }
 
   openSection(sectionId: string){

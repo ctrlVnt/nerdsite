@@ -26,10 +26,10 @@
             <img class="overlay">
             <img class="header-background" src="https://images.pexels.com/photos/57905/pexels-photo-57905.jpeg?cs=srgb&dl=pexels-j-h-57905.jpg&fm=jpg" alt="Immagine di sfondo">
             <div class="div-header">
-                <img class="profile-img" src="../assets/img/profile.jpg" alt="Immagine di profilp">
-                <h1 class="white-color">Chiara Sava</h1>
-                <h2 class="white-color">Phd math student</h2>
-                <p class="about-me-text white-color">
+                <img class="profile-img fade-in" src="../assets/img/profile.jpg" alt="Immagine di profilp">
+                <h1 class="white-color slide-left-in">Chiara Sava</h1>
+                <h2 class="white-color slide-right-in">Phd math student</h2>
+                <p class="about-me-text white-color slide-up-in">
                     I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
                     I work under the supervision of Michel Brion and Matthieu Romagny.
                     
@@ -39,14 +39,14 @@
                     My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
                     Here is my CV.
                 </p>
-                <button mat-flat-button class="about-me-button" (click)="drawer.open()">
+                <button mat-flat-button class="about-me-button slide-up-in" (click)="drawer.open()">
                     More about me
                 </button>
             </div>
         </mat-drawer-container>
     </section>
 
-    <section id="research" style="background-color: #D8F0EC;">
+    <section id="Research" style="background-color: #D8F0EC;">
         <h2>Research</h2>
         <mat-grid-list class="article-list"[cols]="breakpoint" rowHeight="1:1" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let pubblication of pubblications">
@@ -61,7 +61,7 @@
         </mat-grid-list>
     </section>
 
-    <section id="talks" style="background-color: #F0D8F0;">
+    <section id="Talks" style="background-color: #F0D8F0;">
         <h2>Talks</h2>
         <div class="talk-grid">
                 <mat-list class="talk-list">
@@ -88,7 +88,7 @@
         </div>
     </section>
 
-    <section id="teaching" style="background-color: #E0F0D8;">
+    <section id="Teaching" style="background-color: #E0F0D8;">
         <h2>Teaching</h2>
         <mat-list class="subject-list">
             @for(sub of subjects; track sub){
@@ -102,7 +102,7 @@
         </mat-list>
     </section>
 
-    <section id="links" style="background-color: #F0E7E4;">
+    <section id="Some links" style="background-color: #F0E7E4;">
         <h2>Some links</h2>
         <mat-list class="link-list">
             @for(link of links; track link){
@@ -115,7 +115,7 @@
         </mat-list>
     </section>
 
-    <section id="contact" style="background-color: #D6DFFF;">
+    <section id="Contact" style="background-color: #D6DFFF;">
         <h2>Contact</h2>
         <a href="mailto:sava@karlin.mff.cuni.cz">sava&#64;karlin.mff.cuni.cz</a>
         <footer>

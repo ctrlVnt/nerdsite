@@ -16,6 +16,7 @@
     height: 100vh;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
+    background-color: #040D01;
 }
 
 .profile-img {
@@ -95,7 +96,7 @@ section{
 }
 
 .header{
-    padding-top: 30px;
+    padding-top: 0px
 }
 
 .image {
@@ -169,7 +170,7 @@ mat-drawer {
 
 .div-header{
     position:relative;
-    top: 15vh;
+    top:20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,6 +273,64 @@ footer{
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-left-in {
+    animation: slideLeft 1s ease-in;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-right-in {
+    animation: slideRight 1s ease-in;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up-in {
+    animation: slideUp 1s ease-in;
 }
 
 @media screen and (max-width: 768px) {

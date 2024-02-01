@@ -4,9 +4,6 @@ nav {
     z-index: 2;
     padding: 10px;
     width: 100%;
-    align-items: center;
-    text-align: center;
-    transition: height 0.3s ease;
 }
 
 div{
@@ -26,12 +23,12 @@ div{
 ul {
     list-style: none;
     margin-right: 15px;
-    transition: transform 0.3s ease;
 }
 
 li {
     display: inline-block;
     margin-right: 20px;
+    transition: padding 0.5s ease-in;
 }
 
 button[mat-button][color="my-custom-color"] {
@@ -46,6 +43,21 @@ button[mat-button][color="my-custom-color"] {
     color: #fff;
 }
 
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.slide-left{
+    animation: slideIn 0.3s ease-in;
+}
+
 @media screen and (max-width: 768px) {
 
     div{
@@ -58,6 +70,11 @@ button[mat-button][color="my-custom-color"] {
         display:flex;
     }
     
+    .logo{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
     ul {
         display: flex;
         flex-direction: column;
@@ -65,10 +82,27 @@ button[mat-button][color="my-custom-color"] {
 
     nav {
         height: auto;
+        padding: 0px;
+        padding-bottom: 10px;
         min-height: 50px;
     }
 
-    .is-nav-expanded ul {
-        transform: translateX(0);
+    li{
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+    }
+    
+    .fade-in {
+        animation: fadeIn 1s forwards;
     }
 }
