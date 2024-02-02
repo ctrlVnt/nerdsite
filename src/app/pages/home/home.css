@@ -20,10 +20,8 @@
 }
 
 .profile-img {
-    margin-bottom: 50px;
-    max-height: 300px;
-    height: 30vh;
-    border-radius: 50%;
+    height:300px;
+    border-radius: 15%;
     z-index: 3;
 }
 
@@ -76,8 +74,8 @@
 }
 
 h1{
-    font-size: 70px;
-    margin-bottom: 45px;
+    font-size: 90px;
+    margin-bottom: 60px;
 }
 
 h2{
@@ -170,7 +168,7 @@ mat-drawer {
 
 .div-header{
     position:relative;
-    top:20vh;
+    top:10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,6 +182,13 @@ mat-drawer {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.full-screen-header{
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    align-items: center;
 }
 
 .overlay{
@@ -249,11 +254,10 @@ footer{
 }
 
 .about-me-text{
-    margin-top: 20px;
-    font-size: 18px;
-    margin-left: 10%;
-    margin-right: 10%;
+    font-size: 23px;
+    line-height: 150%;
     max-width: 800px;
+    margin-right: 50px;
 }
 
 .avatar{
@@ -333,6 +337,25 @@ footer{
     animation: slideUp 1s ease-in;
 }
 
+@media screen and (max-width: 1200px) {
+    .full-screen-header{
+        padding: 80px;
+    }
+
+    .about-me-text{
+        font-size: 18px;
+    }
+
+    .profile-img{
+        height:250px;
+    }
+
+    h1{
+        font-size: 80px;
+        margin-bottom: 45px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .about-me-text{
         display: none;
@@ -341,5 +364,20 @@ footer{
     .about-me-button{
         display: flex;
         margin-top: 5%;
+    }
+
+    .profile-img {
+        height: 30vh;
+        max-height: 300px;
+        border-radius: 50%;
+    }
+
+    .div-header{
+        top:20vh;
+    }
+
+    h1{
+        font-size: 70px;
+        margin-bottom: 45px;
     }
 }
