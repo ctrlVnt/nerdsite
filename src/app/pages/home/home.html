@@ -2,15 +2,15 @@
 
     <app-navbar></app-navbar>
     
-    <section id="header" class="header" style="background-color: #f0f0f0;">
+    <section id="header" class="header">
         <mat-drawer-container [hasBackdrop]="true">
             <mat-drawer #drawer mode="over" autoFocus="false">
                 <button mat-icon-button id="clearButton" class="clear-icon" (click)="drawer.close()">
                     <mat-icon>clear</mat-icon>
                 </button>
                 <div class="presentation-text">
-                    <h3 class="about-me">About me</h3>
-                    <p>
+                    <h3 class="about-me black-color">About me</h3>
+                    <p class="black-color">
                         I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
                         I work under the supervision of Michel Brion and Matthieu Romagny.
                         
@@ -23,11 +23,11 @@
                 </div>
             </mat-drawer>
 
-            <img class="overlay">
+            <div class="overlay"></div>
             <img class="header-background" src="https://images.pexels.com/photos/57905/pexels-photo-57905.jpeg?cs=srgb&dl=pexels-j-h-57905.jpg&fm=jpg" alt="Immagine di sfondo">
             <div class="div-header">
                 <div class="full-screen-header">
-                    <p class="about-me-text white-color slide-left-in">
+                    <p class="about-me-text  slide-left-in">
                         I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
                         I work under the supervision of Michel Brion and Matthieu Romagny.
                         
@@ -39,31 +39,35 @@
                     </p>
                     <img class="profile-img fade-in" src="../assets/img/profile.jpg" alt="Immagine di profilp">
                 </div>
-                <h1 class="white-color slide-right-in">Chiara Sava</h1>
-                <h2 class="white-color slide-left-in">Phd math student</h2>
+                <h1 class=" slide-right-in">Chiara Sava</h1>
+                <h2 class=" slide-left-in">Phd math student</h2>
                 <button mat-flat-button class="about-me-button slide-up-in" (click)="drawer.open()">
                     More about me
                 </button>
             </div>
         </mat-drawer-container>
-    </section>
+    </section>     
 
-    <section id="Research" style="background-color: #D8F0EC;">
+    <section id="Research">
+        <div class="overlay"></div>
+        <img class="background" src="https://img.freepik.com/free-photo/dramatic-black-white-sea-landscape_23-2150037708.jpg" alt="Immagine di sfondo">
         <h2>Research</h2>
         <mat-grid-list class="article-list"[cols]="breakpoint" rowHeight="1:1" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let pubblication of pubblications">
                     <mat-card>
                         <mat-card-content>
-                            <h3 class="research-title">{{pubblication.content[0]}}</h3>
-                            <p class="research-text">{{pubblication.content[1]}}</p>
-                            <a class="research-link">{{pubblication.content[2]}}</a>
+                            <h3 class="research-title black-color">{{pubblication.content[0]}}</h3>
+                            <p class="research-text black-color">{{pubblication.content[1]}}</p>
+                            <a class="research-link black-color">{{pubblication.content[2]}}</a>
                         </mat-card-content>
                     </mat-card>
                 </mat-grid-tile>
         </mat-grid-list>
     </section>
 
-    <section id="Talks" style="background-color: #F0D8F0;">
+    <section id="Talks">
+        <div class="overlay"></div>
+        <img class="background" src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/074a102d-0a76-4e5c-824a-1c2a4c0bc16e/soleildame.jpg" alt="Immagine di sfondo">
         <h2>Talks</h2>
         <div class="talk-grid">
                 <mat-list class="talk-list">
@@ -90,7 +94,9 @@
         </div>
     </section>
 
-    <section id="Teaching" style="background-color: #E0F0D8;">
+    <section id="Teaching">
+        <div class="overlay"></div>
+        <img class="background" src="https://www.thephotoargus.com/wp-content/uploads/2012/04/stunning-black-and-white-25.jpg" alt="Immagine di sfondo">
         <h2>Teaching</h2>
         <mat-list class="subject-list">
             @for(sub of subjects; track sub){
@@ -104,7 +110,9 @@
         </mat-list>
     </section>
 
-    <section id="Some links" style="background-color: #F0E7E4;">
+    <section id="Some links">
+        <div class="overlay"></div>
+        <img class="background" src="https://media.istockphoto.com/id/925706258/photo/tropical-banana-palm-leaf.jpg?s=612x612&w=0&k=20&c=XaVt7X8GOwluRfLuUcJHN_W8AE4BjH5_aWpGt5KWV-k=" alt="Immagine di sfondo">
         <h2>Some links</h2>
         <mat-list class="link-list">
             @for(link of links; track link){
@@ -117,7 +125,9 @@
         </mat-list>
     </section>
 
-    <section id="Contact" style="background-color: #D6DFFF;">
+    <section id="Contact">
+        <div class="overlay"></div>
+        <img class="background" src="https://cdn.mos.cms.futurecdn.net/5PMe5hr8tjSS9Nq5d6Cebe.jpg" alt="Immagine di sfondo">
         <h2>Contact</h2>
         <a href="mailto:sava@karlin.mff.cuni.cz">sava&#64;karlin.mff.cuni.cz</a>
         <footer>

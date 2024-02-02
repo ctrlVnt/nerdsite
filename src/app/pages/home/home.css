@@ -76,10 +76,35 @@
 h1{
     font-size: 90px;
     margin-bottom: 60px;
+    color: #fff;
 }
 
 h2{
     font-size: 40px;
+    z-index: 1;
+    color: #fff;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+    color: #fff;
+}
+
+p{
+    font-size: 18px;
+    color: #fff;
+}
+
+a{
+    font-size: 15px;
+    color: #fff;
+    z-index: 1;
+}
+
+span{
+    color: #fff;
 }
 
 section{
@@ -89,12 +114,13 @@ section{
     align-items: center;
     flex-direction: column;
     scroll-snap-align: start;
-    height: 100vh;
-    padding-top: 100px;
+    height: 85vh;
+    padding-top: 15vh;
 }
 
 .header{
-    padding-top: 0px
+    height: 100vh;
+    padding-top: 0px;
 }
 
 .image {
@@ -111,6 +137,7 @@ section{
 
 mat-card{
     width: 80%;
+    z-index: 2;
 }
 
 mat-card-content{
@@ -118,6 +145,10 @@ mat-card-content{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+mat-list-item{
+    z-index: 1;
 }
 
 .research-title{
@@ -184,6 +215,15 @@ mat-drawer {
     object-position: center;
 }
 
+.background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .full-screen-header{
     display: flex;
     flex-direction: row;
@@ -192,7 +232,6 @@ mat-drawer {
 }
 
 .overlay{
-    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -205,8 +244,8 @@ mat-drawer {
     vertical-align: middle;
 }
 
-.white-color{
-    color: #fff;
+.black-color{
+    color: #000;
 }
 
 .presentation-text{
@@ -227,19 +266,6 @@ mat-divider{
     margin-bottom: 10px;
 }
 
-h3{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-p{
-    font-size: 18px;
-}
-
-a{
-    font-size: 15px;
-}
-
 footer{
     display: flex;
     width: 100%;
@@ -251,6 +277,7 @@ footer{
     margin-top: auto;
     padding-top: 50px;
     padding-bottom: 20px;
+    z-index: 1;
 }
 
 .about-me-text{
