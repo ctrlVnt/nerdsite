@@ -306,6 +306,10 @@ footer{
     justify-content: center;
 }
 
+app-contactform{
+    z-index: 1;
+}
+
 @keyframes fadeIn {
     from {
       opacity: 0;
