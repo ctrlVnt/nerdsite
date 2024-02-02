@@ -1,13 +1,13 @@
 <form name="contact" (ngSubmit)="onSubmit()" [formGroup]="profileForm">
 
     <label for="email">Email: </label>
-    <input id="email" type="text" formControlName="email">
+    <input name="email" id="email" type="text" formControlName="email">
   
     <label for="object">Object: </label>
-    <input id="object" type="text" formControlName="object">
+    <input name="object" id="object" type="text" formControlName="object">
   
     <label for="message">Message: </label>
-    <textarea id="message" type="text" formControlName="message"></textarea>
+    <textarea name="message" id="message" type="text" formControlName="message"></textarea>
 
     <button type="submit">submit</button>
 
