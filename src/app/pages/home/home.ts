@@ -70,15 +70,7 @@ export class AppComponent implements OnInit {
     ]}
   ];
 
-  upcoming_talks = [
-    { content: [
-      'Ciao sono...',
-      'kjhdbjksbldbckljvn',
-      'Ver'
-    ]}
-  ];
-
-  passed_talks = [
+  events = [
     { content: [
       'saasdsd',
       'dadcas',

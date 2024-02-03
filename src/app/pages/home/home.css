@@ -136,20 +136,19 @@ section{
 }
 
 .pubblications{
-    width: 80%;
-    height: 100%;
+    margin-inline: 30px;
 }
 
-mat-grid-list{
+.grid{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin-top: 30px;
-    width: 100%;
     z-index: 1;
-    height: 100vh;
-}
 
-mat-grid-tile{
-    margin-bottom: 20px;
-    overflow-y: scroll;  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 mat-list-item{
@@ -427,5 +426,14 @@ app-contactform{
     h1{
         font-size: 70px;
         margin-bottom: 45px;
+    }
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pubblications{
+        margin-inline: 0px;
+        margin-block: 30px;
     }
 }
