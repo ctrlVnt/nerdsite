@@ -400,6 +400,11 @@ app-contactform{
 }
 
 @media screen and (max-width: 768px) {
+
+    section{
+        height: 85vh;
+    }
+
     .about-me-text{
         display: none;
     }
