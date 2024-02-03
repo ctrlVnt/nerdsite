@@ -1,14 +1,32 @@
 <form name="contact"  method="POST" (ngSubmit)="onSubmit()" [formGroup]="profileForm" netlify>
 
-    <label for="email">Email: </label>
-    <input name="email" id="email" type="text" formControlName="email">
-  
-    <label for="object">Object: </label>
-    <input name="object" id="object" type="text" formControlName="object">
-  
-    <label for="message">Message: </label>
-    <textarea name="message" id="message" type="text" formControlName="message"></textarea>
+    <mat-form-field>
+        <mat-label for="email">Email: </mat-label>
+        <input matInput placeholder="email@email.com" name="email" id="email" type="text" formControlName="email">
+        @if (profileForm.get('email')?.hasError('email') && !profileForm.get('email')?.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+        }
+        @if (profileForm.get('email')?.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+        }
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label for="object">Object</mat-label>
+        <input matInput placeholder="Ex. Pizza" name="object" id="object" type="text" formControlName="object">
+        @if (profileForm.get('object')?.hasError('required')) {
+            <mat-error>Object is <strong>required</strong></mat-error>
+        }
+    </mat-form-field>
 
-    <button type="submit">submit</button>
+    <mat-form-field>
+        <mat-label for="message">Message: </mat-label>
+        <textarea matInput name="message" placeholder="Ex. It makes me feel..." id="message" type="text" formControlName="message"></textarea>
+        @if (profileForm.get('message')?.hasError('required')) {
+            <mat-error>Message is <strong>required</strong></mat-error>
+        }
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" [disabled]="!profileForm.valid">submit</button>
 
 </form>

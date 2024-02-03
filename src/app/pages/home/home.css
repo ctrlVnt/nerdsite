@@ -95,6 +95,7 @@ h3{
 p{
     font-size: 18px;
     color: #fff;
+    z-index: 1;
 }
 
 a{
@@ -273,10 +274,10 @@ footer{
     justify-content: center;
     flex-direction: column;
     color: white;
-    background-color: rgb(139, 139, 139);
+    background-color: rgb(102, 102, 102);
     margin-top: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     z-index: 1;
 }
 
@@ -289,12 +290,12 @@ footer{
 
 .avatar{
     max-width: 50px;
-    margin-left: 10px;
+    margin-left: 20px;
     transform: translateY(-10%);
 }
 
 .footer-text{
-    font-size: 20px;
+    font-size: 15px;
     color: #fff;
 }
 
@@ -304,9 +305,11 @@ footer{
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: -20px;
 }
 
 app-contactform{
+    transform: translateX(-50px);
     z-index: 1;
 }
 

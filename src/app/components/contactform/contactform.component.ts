@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input'; 
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [ ReactiveFormsModule, HttpClientModule ],
+  imports: [ ReactiveFormsModule, HttpClientModule, MatButtonModule, MatInputModule ],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.css'
 })
 export class ContactformComponent {
 
   profileForm = new FormGroup({
-    email: new FormControl(''),
-    object: new FormControl(''),
-    message: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    object: new FormControl('', [Validators.required]),
+    message: new FormControl('', [Validators.required]),
   });
 
   constructor(private http: HttpClient) {}
@@ -39,13 +41,4 @@ export class ContactformComponent {
         console.log(response);
       });
   }
-
-      // Make the POST request to Netlify
-      /*this.http.post('/', formData.toString(), {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }).subscribe(response => {
-        console.log(response);
-      });
-    }
-  }*/
 }

@@ -3,4 +3,5 @@ form{
     flex-direction: column;
     padding: 50px;
     color: #fff;
+    width: 100%;
 }
