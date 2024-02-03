@@ -10,15 +10,8 @@
                 </button>
                 <div class="presentation-text">
                     <h3 class="about-me black-color">About me</h3>
-                    <p class="black-color">
-                        I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
-                        I work under the supervision of Michel Brion and Matthieu Romagny.
+                    <p class="black-color" [innerHTML]="formatAboutMe(aboutme)">
                         
-                        My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic.
-                        Related subjects I am interested in are birational geometry and representation theory of reductive groups.
-                        
-                        My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
-                        Here is my CV.
                     </p>
                 </div>
             </mat-drawer>
@@ -27,15 +20,7 @@
             <img class="header-background" src="https://images.pexels.com/photos/57905/pexels-photo-57905.jpeg?cs=srgb&dl=pexels-j-h-57905.jpg&fm=jpg" alt="Immagine di sfondo">
             <div class="div-header">
                 <div class="full-screen-header">
-                    <p class="about-me-text  slide-left-in">
-                        I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021.
-                        I work under the supervision of Michel Brion and Matthieu Romagny.
-                        
-                        My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic.
-                        Related subjects I am interested in are birational geometry and representation theory of reductive groups.
-                        
-                        My first projects were about classifying non-reduced parabolic subgroups in small characteristics.
-                        Here is my CV.
+                    <p class="about-me-text  slide-left-in" [innerHTML]="formatAboutMe(aboutme)">
                     </p>
                     <img class="profile-img fade-in" src="../assets/img/profile.jpg" alt="Immagine di profilp">
                 </div>
@@ -52,15 +37,12 @@
         <div class="overlay"></div>
         <img class="background" src="https://img.freepik.com/free-photo/dramatic-black-white-sea-landscape_23-2150037708.jpg" alt="Immagine di sfondo">
         <h2>Research</h2>
-        <mat-grid-list class="article-list"[cols]="breakpoint" rowHeight="1:1" (window:resize)="onResize($event)">
+        <mat-grid-list [cols]="breakpoint" gutterSize="30px" rowHeight="fit" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let pubblication of pubblications">
-                    <mat-card>
-                        <mat-card-content>
-                            <h3 class="research-title black-color">{{pubblication.content[0]}}</h3>
-                            <p class="research-text black-color">{{pubblication.content[1]}}</p>
-                            <a class="research-link black-color">{{pubblication.content[2]}}</a>
-                        </mat-card-content>
-                    </mat-card>
+                        <div class="pubblications">
+                            <a class="research-title"  href="{{pubblication.content[2]}}">{{pubblication.content[0]}}</a>
+                            <p class="research-text">{{pubblication.content[1]}}</p>
+                        </div>
                 </mat-grid-tile>
         </mat-grid-list>
     </section>

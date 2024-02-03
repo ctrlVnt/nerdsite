@@ -110,7 +110,6 @@ span{
 
 section{
     position: relative;
-    overflow-y: scroll;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -136,16 +135,21 @@ section{
     right: 10px;
 }
 
-mat-card{
+.pubblications{
     width: 80%;
-    z-index: 2;
+    height: 100%;
 }
 
-mat-card-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+mat-grid-list{
+    margin-top: 30px;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+}
+
+mat-grid-tile{
+    margin-bottom: 20px;
+    overflow-y: scroll;  
 }
 
 mat-list-item{
@@ -153,10 +157,19 @@ mat-list-item{
 }
 
 .research-title{
-
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 120%; 
 }
+
+.research-title:hover{
+    color: rgb(180, 102, 0);
+}
+
 .research-text{
-    
+    margin-top: 15px;
+    line-height: 120%;
 }
 .research-link{
     
@@ -177,10 +190,6 @@ mat-drawer {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 50px;
-}
-
-.article-list{
-    width: 100%;
 }
 
 .talk-grid{
@@ -407,7 +416,7 @@ app-contactform{
     }
 
     .div-header{
-        top:20vh;
+        top:10vh;
     }
 
     h1{
