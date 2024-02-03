@@ -35,15 +35,15 @@
 
     <section id="Research">
         <div class="overlay"></div>
-        <img class="background" src="https://img.freepik.com/free-photo/dramatic-black-white-sea-landscape_23-2150037708.jpg" alt="Immagine di sfondo">
-        <h2>Research</h2>
-        <div class="grid">
-                <div *ngFor="let pubblication of pubblications">
-                        <div class="pubblications">
-                            <a class="research-title"  href="{{pubblication.content[2]}}">{{pubblication.content[0]}}</a>
-                            <p class="research-text">{{pubblication.content[1]}}</p>
-                        </div>
+            <img class="background" src="https://img.freepik.com/free-photo/dramatic-black-white-sea-landscape_23-2150037708.jpg" alt="Immagine di sfondo">
+            <h2>Research</h2>
+            <div class="grid">
+                <a class="research-item" *ngFor="let pubblication of pubblications" href="{{pubblication.content[2]}}">
+                    <div class="pubblications">
+                        <h3 class="research-title">{{pubblication.content[0]}}</h3>
+                        <p class="research-text">{{pubblication.content[1]}}</p>
                     </div>
+                </a>
             </div>
     </section>
     
@@ -54,14 +54,10 @@
         <h2>Events</h2>
 
         <mat-list class="subject-list">
-            @for(ev of events; track ev){
-                <mat-list-item>
+                <mat-list-item *ngFor="let ev of events">
                     <span matListItemTitle>{{ev.content[0]}}</span>
                     <span matListItemLine>{{ev.content[1]}}</span>
-                    <a>{{ev.content[2]}}</a>
                 </mat-list-item>
-                <mat-divider></mat-divider>
-            }
         </mat-list>
 
     </section>
@@ -71,14 +67,10 @@
         <img class="background" src="https://www.thephotoargus.com/wp-content/uploads/2012/04/stunning-black-and-white-25.jpg" alt="Immagine di sfondo">
         <h2>Teaching</h2>
         <mat-list class="subject-list">
-            @for(sub of subjects; track sub){
-                <mat-list-item>
+                <mat-list-item *ngFor="let sub of subjects">
                     <span matListItemTitle>{{sub.content[0]}}</span>
                     <span matListItemLine>{{sub.content[1]}}</span>
-                    <a>{{sub.content[2]}}</a>
                 </mat-list-item>
-                <mat-divider></mat-divider>
-            }
         </mat-list>
     </section>
 
@@ -87,13 +79,10 @@
         <img class="background" src="https://media.istockphoto.com/id/925706258/photo/tropical-banana-palm-leaf.jpg?s=612x612&w=0&k=20&c=XaVt7X8GOwluRfLuUcJHN_W8AE4BjH5_aWpGt5KWV-k=" alt="Immagine di sfondo">
         <h2>Some links</h2>
         <mat-list class="link-list">
-            @for(link of links; track link){
-                <mat-list-item>
+                <mat-list-item *ngFor="let link of links">
                     <span matListItemTitle>{{link.content[0]}}</span>
                     <span matListItemLine>{{link.content[1]}}</span>
-                    <a>{{link.content[2]}}</a>
                 </mat-list-item>
-            }
         </mat-list>
     </section>
 
@@ -104,12 +93,11 @@
 
         <app-contactform></app-contactform>
         
-        <p>Or write directly at: </p><a href="mailto:sava@karlin.mff.cuni.cz">sava&#64;karlin.mff.cuni.cz</a>
+        <p>Or write directly at: </p><a class="email" href="mailto:sava@karlin.mff.cuni.cz">sava&#64;karlin.mff.cuni.cz</a>
         <footer>
             <h3>Credits</h3>
             <div class="riccardoventurini">
                 <p class="footer-text">website designed by <a class="footer-text" href="https://riccardoventurini.dev/">riccardoventurini.dev</a></p>
-                <img class="avatar" src="../../../assets/img/avatar.svg" alt="avatar">
             </div>
         </footer>
     </section>

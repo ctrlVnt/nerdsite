@@ -35,6 +35,10 @@ button[mat-button][color="my-custom-color"] {
     color: #fff;
 }
 
+button[mat-button]:hover {
+    color: #66b2f5;
+}
+
 .menu-icon{
     display: none;
     right: 10px;
