@@ -42,11 +42,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event : Event) {
-    
-  }
-
   aboutme: string = "I am a PhD student in IRMAR (University of Rennes) and Institut Fourier (University of Grenoble Alpes), since September 2021." + '\n' +
             "I work under the supervision of Michel Brion and Matthieu Romagny." +
             " My research is mainly about the geometry of projective homogeneous varieties over fields of positive characteristic." + '\n' +

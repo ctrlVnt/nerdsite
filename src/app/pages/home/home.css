@@ -361,6 +361,7 @@ app-contactform{
 
     section{
         height: 85vh;
+        scroll-snap-stop: always;
     }
 
     .about-me-text{
