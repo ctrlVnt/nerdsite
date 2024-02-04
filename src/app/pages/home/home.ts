@@ -23,15 +23,16 @@ import { ContactformComponent } from '../../components/contactform/contactform.c
 
 export class AppComponent implements OnInit {
   title = 'chiarasava';
-  breakpoint: number = 1;
   constructor() { }
 
+  isWindowGreaterThan600 = window.innerWidth > 768;
+
   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 600) ? 1 : 2;
   }
 
+  @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.breakpoint = ((event.target as Window).innerWidth <= 600) ? 1 : 2;
+    this.isWindowGreaterThan600 =  window.innerWidth > 768;
   }
 
   openSection(sectionId: string){

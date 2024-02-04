@@ -94,11 +94,14 @@
         <app-contactform></app-contactform>
         
         <p>Or write directly at: </p><a class="email" href="mailto:sava@karlin.mff.cuni.cz">sava&#64;karlin.mff.cuni.cz</a>
-        <footer>
+        <footer *ngIf="isWindowGreaterThan600">
             <h3>Credits</h3>
             <div class="riccardoventurini">
                 <p class="footer-text">website designed by <a class="footer-text" href="https://riccardoventurini.dev/">riccardoventurini.dev</a></p>
             </div>
         </footer>
+        <div class="footer" *ngIf="!isWindowGreaterThan600">
+            <p class="footer-text">website designed by <a class="footer-text" href="https://riccardoventurini.dev/">riccardoventurini.dev</a></p>
+        </div>
     </section>
 </div>

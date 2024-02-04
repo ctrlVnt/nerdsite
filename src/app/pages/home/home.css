@@ -244,6 +244,12 @@ footer{
     z-index: 1;
 }
 
+.footer{
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+}
+
 .about-me-text{
     font-size: 23px;
     line-height: 150%;
@@ -373,7 +379,7 @@ app-contactform{
     }
 
     .div-header{
-        top:10vh;
+        top:5vh;
     }
 
     h1{
