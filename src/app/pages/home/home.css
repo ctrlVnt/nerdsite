@@ -360,7 +360,7 @@ app-contactform{
 @media screen and (max-width: 768px) {
 
     section{
-        height: 85vh;
+        height: 100vh;
     }
 
     .about-me-text{
