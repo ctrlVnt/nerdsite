@@ -1,3 +1,9 @@
+<div class="popup" *ngIf="sended" [class.slide-in]="sended" [class.slide-out]="outeffect">
+    <h2>Invio avvenuto con successo</h2>
+    <p>Grazie per aver scritto, verrà data una risposta via mail il prima possibile!</p>
+    <button mat-raised-button (click) = "resend()">Ok</button>
+</div>
+
 <form name="contact"  method="POST" (ngSubmit)="onSubmit()" [formGroup]="profileForm" netlify>
 
     <mat-form-field>

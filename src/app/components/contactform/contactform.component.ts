@@ -4,15 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [ ReactiveFormsModule, HttpClientModule, MatButtonModule, MatInputModule ],
+  imports: [ ReactiveFormsModule, HttpClientModule, MatButtonModule, MatInputModule, CommonModule ],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.css'
 })
 export class ContactformComponent {
+
+  sended = false;
+  outeffect = false;
 
   profileForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -23,8 +27,6 @@ export class ContactformComponent {
   constructor(private http: HttpClient) {}
 
   onSubmit() {
-
-    console.log(this.profileForm.value);
 
     const formData: any = this.profileForm.value;
 
@@ -37,8 +39,17 @@ export class ContactformComponent {
 
     this.http
       .post('/', new URLSearchParams(formData).toString(), { headers, responseType: 'text' })
-      .subscribe((response) => {
-        console.log(response);
+      .subscribe(() => {
+        this.sended = true;
+        this.profileForm.reset();
       });
+  }
+
+  resend(){
+    this.outeffect = true;
+    setTimeout(() =>{
+      this.sended = false;
+      this.outeffect = false;
+    }, 100);
   }
 }
