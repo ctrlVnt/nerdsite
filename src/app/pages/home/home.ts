@@ -30,6 +30,17 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  trailX: number = -10;
+  trailY: number = -10;
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    setTimeout(()=>{
+      this.trailX = event.pageX;
+      this.trailY = event.pageY;
+    }, 100)
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isWindowGreaterThan600 =  window.innerWidth > 768;
