@@ -1,6 +1,8 @@
-# ChiarasavaIt
+# chiarasava.it
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+This is a Chiara Sava's personal website.
+
+[This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.]
 
 ## Development server
 
