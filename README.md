@@ -2,6 +2,21 @@
 
 This is a Chiara Sava's personal website.
 
+# Come modificare il sito
+
+## modificare i testi
+
+Aprire il file chiamato [testi.json](https://github.com/ctrlVnt/chiarasava.it/blob/main/testi.json), cliccare la matita in alto a destra, modificare, una volta completata la modifica cliccare su `commit changes...` e nelle finestra confermare.
+
+## modificare le immagini
+
+Andare nella cartella delle [immagini](https://github.com/ctrlVnt/chiarasava.it/tree/main/src/assets/img), premere su `add file` -> `upload` e caricare l'immagine desiderata.
+
+**NB:** Il nome del file è importante e non deve essere cambiato, quindi per sostituire un'immagine cancellare la vecchia e caricarne una con lo stesso nome ed estensione.
+
+
+# Informazioni di sviluppo
+
 [This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.]
 
 ## Development server
