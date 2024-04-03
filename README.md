@@ -6,7 +6,7 @@ This is a Chiara Sava's personal website.
 
 ## modificare i testi
 
-Aprire il file chiamato [testi.json](https://github.com/ctrlVnt/chiarasava.it/blob/main/testi.json), cliccare la matita in alto a destra, modificare, una volta completata la modifica cliccare su `commit changes...` e nelle finestra confermare.
+Andare alla cartella [text](https://github.com/ctrlVnt/chiarasava.it/tree/main/src/assets/text) -> cercare la sezione che si intende modificare -> aprire il file -> cliccare la matita in alto a destra -> una volta completata la modifica cliccare su `commit changes...` e confermare.
 
 ## modificare le immagini
 

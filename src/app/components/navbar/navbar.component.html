@@ -6,9 +6,8 @@
         <button class="logo" color="my-custom-color" (click)="openSection('header')">Chiara Sava</button>
         <ul *ngIf="isNavExpanded" [@navAnim]="isNavExpanded">
             <li *ngFor="let action of actions; let i = index" [ngClass]="'fade-in'" [style.animation-delay]="fadeInDelays[i]">
-                <button mat-button color="my-custom-color" (click)="openSection(action);toggleNav()">{{action}}</button>
+                <button mat-button class="button-56" color="my-custom-color" (click)="openSection(action);toggleNav()">{{action}}</button>
             </li>
         </ul>
     </div>
 </nav>
-

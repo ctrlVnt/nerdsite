@@ -1,0 +1,14 @@
+{
+    "subjects": [
+    {
+      "title": "Mathematical Logic (NMAG331)",
+      "description": "An advanced course in mathematical logic. It breifly recalls basic concepts and costructions. The main topic is the incompleteness and the undecidability, and Godel's theorems in particular. A recommended course for specializations Mathematical Analysis and Mathematical Structures within General Mathematics.",
+      "link": "https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NMAG331"
+    },
+    {
+      "title": "Introduction to Set Theory 2 (NMAG439)",
+      "description": "This is a follow up cours for the basic set theory course. Students will learn basic concepts of infinitary combinatorics and set theoretic topics beyond the fundamentals.",
+      "link": "https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NMAG439"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
   fadeInDelays: string[] = [];
 
   ngOnInit() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1200) {
       this.isNavExpanded = false;
     }
     this.fadeInDelays = this.actions.map((_, i) => `${i * 0.2}s`);
@@ -47,7 +47,7 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    if(window.innerWidth <= 768){
+    if(window.innerWidth <= 1200){
       this.isNavExpanded = false;
     }else{
       this.isNavExpanded = true;
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleNav() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1200) {
       this.isNavExpanded = !this.isNavExpanded;
     }
   }

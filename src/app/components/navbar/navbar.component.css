@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@8&display=swap');
+
 nav {
     position: fixed;
-    background-color: #333;
+    background-color: #fff;
     z-index: 10;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
+    border-bottom: 2px solid #000;
 }
 
 div{
@@ -13,11 +16,12 @@ div{
 }
 
 .logo{
-    color: #fff;
+    font-family: "Honk", system-ui;
     border: none;
     background: none;
-    font-size: 30px;
+    font-size: 50px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 ul {
@@ -32,7 +36,7 @@ li {
 }
 
 button[mat-button][color="my-custom-color"] {
-    color: #fff;
+    color: #000;
 }
 
 button[mat-button]:hover {
@@ -44,7 +48,7 @@ button[mat-button]:hover {
     right: 10px;
     top: 10px;
     position: absolute;
-    color: #fff;
+    color: #000;
 }
 
 @keyframes slideIn {
@@ -62,7 +66,7 @@ button[mat-button]:hover {
     animation: slideIn 0.3s ease-in;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
 
     div{
         justify-content: center;
@@ -76,7 +80,6 @@ button[mat-button]:hover {
     
     .logo{
         margin-left: 0;
-        margin-top: 15px;
     }
     
     ul {
@@ -92,6 +95,7 @@ button[mat-button]:hover {
     }
 
     li{
+        margin-bottom: 20px;
         opacity: 0;
     }
 
@@ -110,3 +114,54 @@ button[mat-button]:hover {
         animation: fadeIn 1s forwards;
     }
 }
+
+.button-56 {
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #111;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-56:after {
+    background-color: #111;
+    content: "";
+    display: block;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .button-56:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .button-56:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  }

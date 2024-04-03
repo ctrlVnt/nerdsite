@@ -1,0 +1,19 @@
+{
+    "links": [
+        {
+          "title": "Interesting website",
+          "description": "Interesting website with some calcul and little game to try",
+          "link": "https://neal.fun/"
+        },
+        {
+          "title": "TRR 358",
+          "description": "Integral Structures in Geometry and Representation Theory",
+          "link": "https://trr358.math.uni-bielefeld.de/people/view/996"
+        },
+        {
+          "title": "Categorie derivate e algebre preproiettive",
+          "description": "Padua Thesis and Dissertation Archive",
+          "link": "https://thesis.unipd.it/handle/20.500.12608/730"
+        }
+      ]
+}
