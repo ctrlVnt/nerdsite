@@ -30,9 +30,9 @@ export class NavbarComponent implements OnInit {
 
   actions = [
     'Research',
-    'Talks',
+    'Events',
     'Teaching',
-    'Some links',
+    'Links',
     'Contact',
   ];
 

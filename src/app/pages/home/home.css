@@ -32,7 +32,6 @@
 }
 
 h1{
-    font-family: "Pixelify Sans", sans-serif;
     font-size: 90px;
     margin-bottom: 60px;
     color: #000;
@@ -95,8 +94,6 @@ section{
 }
 
 .publications{
-    margin-inline: 30px;
-    margin-block: 30px;
     position: relative;
     background-color: #fff;
     border: 2px solid #111;
@@ -128,11 +125,12 @@ section{
 }
 
 .publications:active {
-    background-color: #ffdeda;
+    background-color: #fff;
     outline: 0;
 }
 
 .publications:hover {
+    background-color: #B94ED9;
     outline: 0;
 }
 
@@ -164,19 +162,19 @@ mat-list-item{
 
 .research-item{
     text-decoration: none;
+    margin-block: 30px;
+    margin-inline: 30px;
 }
 
-.research-item:hover .research-title{
-    color:#66b2f5;
+.research-item:hover .research-title,
+.research-item:hover .research-text{
+    color:#fff;
 }
 
 .research-text{
     margin-top: 15px;
     line-height: 120%;
     margin-bottom: 25px;
-}
-.research-link{
-    
 }
 
 .menu-icon{}
@@ -207,7 +205,8 @@ mat-drawer {
     margin: 30px;
 }
 
-.subject-list{
+.subject-list,
+.link-list{
     width: 90%;
 }
 
@@ -219,13 +218,14 @@ mat-drawer {
 
 .subject-list a:hover,
 .link-list a:hover{
-    color: blueviolet;
+    color: #B94ED9;
 }
 
 .div-header{
+    overflow-x: hidden;
     position:relative;
-    top:10%;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -279,6 +279,7 @@ mat-drawer {
 }
 
 .about-me{
+    font-family: "Pixelify Sans", sans-serif;
     text-align: center;
 }
 
@@ -391,7 +392,7 @@ app-contactform{
 }
 
 .link:active {
-    background-color: #ffdeda;
+    background-color: #fff;
     outline: 0;
 }
 
@@ -532,7 +533,7 @@ app-contactform{
     }
     
     .about-me-button:active {
-        background-color: #ffdeda;
+        background-color: #fff;
         outline: 0;
     }
     
@@ -552,10 +553,6 @@ app-contactform{
         border-radius: 50%;
     }
 
-    .div-header{
-        top:5vh;
-    }
-
     h1{
         font-size: 70px;
         margin-bottom: 45px;
@@ -565,9 +562,8 @@ app-contactform{
         align-items: center;
     }
 
-    .publications{
-        margin-inline: 0px;
-        margin-block: 30px;
+    .footer-text{
+        margin-bottom: 50px;
     }
 }
 
@@ -613,7 +609,7 @@ app-contactform{
 }
 
 .button-56:active {
-    background-color: #ffdeda;
+    background-color: #fff;
     outline: 0;
 }
 

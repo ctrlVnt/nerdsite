@@ -11,7 +11,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list'; 
 import { NavbarComponent } from '../../components/navbar/navbar.component'; 
-import { ContactformComponent } from '../../components/contactform/contactform.component'; 
+import { ContactformComponent } from '../../components/contactform/contactform.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { Clipboard } from '@angular/cdk/clipboard';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import pubblicationsfile from "../../../assets/text/publications.json"
 import linksfile from "../../../assets/text/links.json"
 import eventsfile from "../../../assets/text/events.json"
@@ -45,12 +49,15 @@ interface Links {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatListModule, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule, NavbarComponent, ContactformComponent],
+  imports: [CommonModule, RouterOutlet, MatListModule, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule, NavbarComponent, ContactformComponent, MatMenuModule, ClipboardModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 
 export class AppComponent{
+
+  constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
+
   title = 'chiarasava';
 
   aboutme:string = textfile.aboutme;
@@ -79,5 +86,17 @@ export class AppComponent{
 
   formatAboutMe(aboutme: string): string {
     return aboutme.replace(/(?:\r\n|\r|\n)/g, '<br>');
+  }
+
+  copyToClipboard() {
+    this.clipboard.copy("sava@karlin.mff.cuni.cz");
+  }
+
+  writeMessage() {
+    window.location.href = `mailto:sava@karlin.mff.cuni.cz`;
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message);
   }
 }

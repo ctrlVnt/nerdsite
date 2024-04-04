@@ -1,5 +1,5 @@
 form{
-    display: flex;
+    display:table;
     flex-direction: column;
     padding: 50px;
     color: #fff;

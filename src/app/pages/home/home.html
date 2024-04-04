@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <h1 class="slide-right-in">Welcome !</h1>
-                <h2 class="slide-left-in">I'm a Phd math student</h2>
+                <!--<h2 class="slide-left-in">I'm a Phd math student</h2> -->
                 <button mat-flat-button class="about-me-button slide-up-in" (click)="drawer.open()">
                     More about me
                 </button>
@@ -50,7 +50,7 @@
     </section>
     
 
-    <section id="Talks">
+    <section id="Events">
        <h2>Events</h2>
 
         <mat-list class="subject-list">
@@ -73,7 +73,7 @@
         </mat-list>
     </section>
 
-    <section id="Some links">
+    <section id="Links">
        <h2>Some links</h2>
         <mat-list class="link-list">
                 <mat-list-item *ngFor="let link of links">
@@ -89,7 +89,11 @@
         <app-contactform></app-contactform>
         
             <p>Or write directly at: </p>
-            <a class="email" href="mailto:sava@karlin.mff.cuni.cz"><div class="link"><p>sava&#64;karlin.mff.cuni.cz</p></div></a>
+            <a><button mat-button class="button-56" [matMenuTriggerFor]="menu">sava&#64;karlin.mff.cuni.cz</button></a>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="copyToClipboard(); openSnackBar('email address copied')"><mat-icon>file_copy</mat-icon>Copy</button>
+                <button mat-menu-item (click)="writeMessage()"><mat-icon> email</mat-icon>Write directly</button>
+              </mat-menu>
             <p class="info">Department of Algebra <br>
                 <a href="https://www.mff.cuni.cz/en/faculty/contacts" target="_blank">Charles University, Faculty of Mathematics and PhysicsKe </a><br>
                 Karlovu 3, 121 16 Praha 2, Czech Republic</p>
