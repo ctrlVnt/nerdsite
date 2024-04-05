@@ -37,7 +37,7 @@ This will start a development server. You can view the website by navigating to 
 
 ## Some indications
 
-To edit the [texts](https://github.com/ctrlVnt/nerdsite/tree/main/src/assets/text) you need to go to the text folder and edit the json files.
+To edit the texts you need to go to the [text](https://github.com/ctrlVnt/nerdsite/tree/main/src/assets/text) folder and edit the json files.
 
 ## Contributing
 
