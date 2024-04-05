@@ -19,17 +19,16 @@
                 </div>
             </mat-drawer>
 
-            <div class="overlay"></div>
             <div class="div-header">
                 <div class="full-screen-header">
-                    <img class="profile-img fade-in" src="../assets/img/profile.jpg" alt="Immagine di profilp">
+                    <img class="profile-img fade-in" src="../assets/img/profile.png" alt="Immagine di profilp">
                     <div class="container">
                         <p class="about-me-text slide-left-in" [innerHTML]="formatAboutMe(aboutme)">
                         </p>
                     </div>
                 </div>
                 <h1 class="slide-right-in">Welcome !</h1>
-                <!--<h2 class="slide-left-in">I'm a Phd math student</h2> -->
+                <!--<h2 class="slide-left-in">I'm a ...</h2> -->
                 <button mat-flat-button class="about-me-button slide-up-in" (click)="drawer.open()">
                     More about me
                 </button>
@@ -48,40 +47,6 @@
                 </a>
             </div>
     </section>
-    
-
-    <section id="Events">
-       <h2>Events</h2>
-
-        <mat-list class="subject-list">
-                <mat-list-item *ngFor="let ev of events">
-                    <span matListItemTitle>{{ev.title}}</span>
-                    <span matListItemLine>{{ev.description}}</span>
-                    <span matListItemLine>{{ev.location}}</span>
-                </mat-list-item>
-        </mat-list>
-
-    </section>
-
-    <section id="Teaching">
-       <h2>Teaching</h2>
-        <mat-list class="subject-list">
-                <mat-list-item *ngFor="let sub of subjects">
-                    <a matListItemTitle href="{{sub.link}}" target="_blank">{{sub.title}}</a>
-                    <span matListItemLine>{{sub.description}}</span>
-                </mat-list-item>
-        </mat-list>
-    </section>
-
-    <section id="Links">
-       <h2>Some links</h2>
-        <mat-list class="link-list">
-                <mat-list-item *ngFor="let link of links">
-                    <a matListItemTitle href="{{link.link}}" target="_blank">{{link.title}}</a>
-                    <span matListItemLine>{{link.description}}</span>
-                </mat-list-item>
-        </mat-list>
-    </section>
 
     <section id="Contact">
         <h2>Contact</h2>
@@ -89,21 +54,13 @@
         <app-contactform></app-contactform>
         
             <p>Or write directly at: </p>
-            <a><button mat-button class="button-56" [matMenuTriggerFor]="menu">sava&#64;karlin.mff.cuni.cz</button></a>
+            <a><button mat-button class="button-56" [matMenuTriggerFor]="menu">example&#64;example.com</button></a>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="copyToClipboard(); openSnackBar('email address copied')"><mat-icon>file_copy</mat-icon>Copy</button>
-                <button mat-menu-item (click)="writeMessage()"><mat-icon> email</mat-icon>Write directly</button>
-              </mat-menu>
-            <p class="info">Department of Algebra <br>
-                <a href="https://www.mff.cuni.cz/en/faculty/contacts" target="_blank">Charles University, Faculty of Mathematics and PhysicsKe </a><br>
-                Karlovu 3, 121 16 Praha 2, Czech Republic</p>
-            
-        <footer *ngIf="isWindowGreaterThan600">
-            <h3>Credits</h3>
-            <div class="riccardoventurini">
-                <p class="footer-text">website designed by <a class="footer-text" href="https://riccardoventurini.dev/">riccardoventurini.dev</a></p>
-            </div>
-        </footer>
-        <p class="footer-text" *ngIf="!isWindowGreaterThan600">website designed by <a class="footer-text" href="https://riccardoventurini.dev/">riccardoventurini.dev</a></p>
+                <button mat-menu-item (click)="copyToClipboard('example&#64;example.com'); openSnackBar('email address copied')"><mat-icon>file_copy</mat-icon>Copy</button>
+                <button mat-menu-item (click)="writeMessage('example&#64;example.com')"><mat-icon> email</mat-icon>Write directly</button>
+            </mat-menu>
     </section>
+
+    <app-footer></app-footer>
+
 </div>

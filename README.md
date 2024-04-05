@@ -1,44 +1,46 @@
-# chiarasava.it
+# Nerdsite
 
-This is a Chiara Sava's personal website.
+This is a model of a portfolio website for nerds !
 
-# Come modificare il sito
+## Installation
 
-## modificare i testi
+To run this project locally, you'll need Node.js and Angular CLI installed on your machine. If you haven't already, you can download Node.js from [here](https://nodejs.org/) and Angular CLI by running the following command:
 
-Andare alla cartella [text](https://github.com/ctrlVnt/chiarasava.it/tree/main/src/assets/text) -> cercare la sezione che si intende modificare -> aprire il file -> cliccare la matita in alto a destra -> una volta completata la modifica cliccare su `commit changes...` e confermare.
+```
+$ npm install -g @angular/cli
+```
 
-## modificare le immagini
+Once you have Node.js and Angular CLI installed, you can clone this repository and navigate into the project directory:
 
-Andare nella cartella delle [immagini](https://github.com/ctrlVnt/chiarasava.it/tree/main/src/assets/img), premere su `add file` -> `upload` e caricare l'immagine desiderata.
+```
+$ git clone https://github.com/your-username/nerdsite.git
+$ cd nerdsite
+```
 
-**NB:** Il nome del file è importante e non deve essere cambiato, quindi per sostituire un'immagine cancellare la vecchia e caricarne una con lo stesso nome ed estensione.
+Then, install the project dependencies using npm:
 
+```
+$ npm install
+```
 
-# Informazioni di sviluppo
+## Usage
 
-[This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.]
+To serve the project locally, run the following command:
 
-## Development server
+```
+$ ng serve
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This will start a development server. You can view the website by navigating to `http://localhost:4200` in your web browser.
 
-## Code scaffolding
+## Some indications
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To edit the [texts](https://github.com/ctrlVnt/nerdsite/tree/main/src/assets/text) you need to go to the text folder and edit the json files.
 
-## Build
+## Contributing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is licensed under the [MIT License](LICENSE).

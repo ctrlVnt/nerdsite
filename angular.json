@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chiarasava.it": {
+    "nerdsite": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/chiarasava.it",
+            "outputPath": "dist/nerdsite",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "chiarasava.it:build:production"
+              "buildTarget": "nerdsite:build:production"
             },
             "development": {
-              "buildTarget": "chiarasava.it:build:development"
+              "buildTarget": "nerdsite:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "chiarasava.it:build"
+            "buildTarget": "nerdsite:build"
           }
         },
         "test": {

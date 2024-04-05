@@ -1,25 +1,26 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card'; 
-import {MatDividerModule} from '@angular/material/divider';
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatFormFieldModule} from '@angular/material/form-field'; 
-import { MatInputModule } from '@angular/material/input';
-import {MatListModule} from '@angular/material/list'; 
-import { NavbarComponent } from '../../components/navbar/navbar.component'; 
-import { ContactformComponent } from '../../components/contactform/contactform.component';
-import { MatMenuModule } from '@angular/material/menu';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { Clipboard } from '@angular/cdk/clipboard';
-import {MatSnackBar} from '@angular/material/snack-bar';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card'; 
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list'; 
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list'; 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { NavbarComponent } from '../../components/navbar/navbar.component'; 
+import { ContactformComponent } from '../../components/contactform/contactform.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+
 import pubblicationsfile from "../../../assets/text/publications.json"
-import linksfile from "../../../assets/text/links.json"
-import eventsfile from "../../../assets/text/events.json"
-import subjectsfile from "../../../assets/text/subjects.json"
 import textfile from "../../../assets/text/testi.json"
 
 interface Publication {
@@ -28,28 +29,10 @@ interface Publication {
   link: string;
 }
 
-interface Events {
-  title: string;
-  description: string;
-  location: string;
-}
-
-interface Subjects {
-  title: string;
-  description: string;
-  link: string;
-}
-
-interface Links {
-  title: string;
-  description: string;
-  link: string;
-}
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatListModule, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule, NavbarComponent, ContactformComponent, MatMenuModule, ClipboardModule],
+  imports: [CommonModule, RouterOutlet, MatListModule, MatInputModule, MatFormFieldModule, MatGridListModule, MatDividerModule, MatButtonModule, MatIconModule, MatSidenavModule, MatCardModule, NavbarComponent, ContactformComponent, MatMenuModule, ClipboardModule, FooterComponent],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -58,17 +41,11 @@ export class AppComponent{
 
   constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
 
-  title = 'chiarasava';
+  title = 'nerdsite';
 
   aboutme:string = textfile.aboutme;
   
   publications: Publication[] = pubblicationsfile.publications;
-
-  events: Events[] = eventsfile.events;
-
-  subjects: Subjects[] = subjectsfile.subjects;
-
-  links: Links[] = linksfile.links;
 
   isWindowGreaterThan600 = window.innerWidth > 768;
 
@@ -88,12 +65,12 @@ export class AppComponent{
     return aboutme.replace(/(?:\r\n|\r|\n)/g, '<br>');
   }
 
-  copyToClipboard() {
-    this.clipboard.copy("sava@karlin.mff.cuni.cz");
+  copyToClipboard(email: string) {
+    this.clipboard.copy(email);
   }
 
-  writeMessage() {
-    window.location.href = `mailto:sava@karlin.mff.cuni.cz`;
+  writeMessage(email: string) {
+    window.location.href = `mailto:` + email;
   }
 
   openSnackBar(message: string) {
