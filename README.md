@@ -2,6 +2,8 @@
 
 This is a model of a portfolio website for nerds !
 
+To see the site: https://nerdsite2.netlify.app
+
 ## Installation
 
 To run this project locally, you'll need Node.js and Angular CLI installed on your machine. If you haven't already, you can download Node.js from [here](https://nodejs.org/) and Angular CLI by running the following command:
