@@ -51,5 +51,6 @@ export class ContactformComponent {
       this.sended = false;
       this.outeffect = false;
     }, 100);
+    window.location.reload();
   }
 }
