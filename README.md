@@ -15,7 +15,7 @@ $ npm install -g @angular/cli
 Once you have Node.js and Angular CLI installed, you can clone this repository and navigate into the project directory:
 
 ```
-$ git clone https://github.com/your-username/nerdsite.git
+$ git clone https://github.com/ctrlVnt/nerdsite.git
 $ cd nerdsite
 ```
 
